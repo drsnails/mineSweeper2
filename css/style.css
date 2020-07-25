@@ -1,0 +1,298 @@
+body {
+    background-color: rgb(73, 160, 167);
+    text-align: center;
+    position: relative;
+}
+
+.game-container {
+    position: relative;
+    background-color: rgb(73, 160, 167);
+    
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    color: rgb(32, 70, 77);
+    position: relative;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(71, 206, 116, 0.452);
+    background-image: linear-gradient(rgba(71, 206, 116, 0.842), rgba(74, 184, 111, 0.753), rgb(73, 160, 167));
+    border-radius: 10px;
+    height: 80px;
+    
+}
+
+
+.hints {
+    position: absolute;
+    left: 3.8%;
+    top: 15%;
+    display: inline;
+}
+
+.hint1, .hint2, .hint3 {
+    width: 500px;
+    margin: 0px 10px;
+    font-size: 35px;
+    padding-top: 6px;
+    border-radius: 50%;
+    transition: 0.15s;
+    opacity: 40%;
+    background-color: transparent;
+}
+
+.hint-mode {
+    opacity: 60%;
+    background-color: rgba(243, 227, 138, 0.781);
+}
+
+
+
+
+.restart-container {
+    position: relative;
+    font-size: 60px;
+    width: 20%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.restart-container p .restart{
+    cursor: pointer;
+    padding: 3%;
+}
+
+.display {
+    position: absolute;
+    font-size: 30px;
+    width: 45%;
+    height: 100%;
+    left: 65%;
+    top: 13%
+}
+
+.manual {
+    margin: 8% 80%;
+    right: 12%;
+    width: 5%;
+    /* top: 100px; */
+    
+    
+}
+
+.manual-btn, .undo-btn {
+    
+    min-width: 80px;
+    color: rgb(83, 79, 136);
+    margin-top: 0px;
+    height: 90px;
+    font-size: 1.2rem;
+    background-color: rgba(250, 133, 56, 0.842);
+}
+
+
+
+.undo {
+    
+    margin: 1.5% 80%;
+    right: 1%;
+    width: 5%;
+    top: 100px;
+    
+}
+
+.safe-click {
+    position: relative;
+    width: 20%;
+    top: 4px;
+    padding: 0;
+}
+
+.safe-btn {
+    position: absolute;
+    background-color: rgb(73, 201, 233);
+    color: rgb(221, 107, 62);
+    margin-top: 5%;
+    width: fit-content;
+    padding: 15px;
+    height: 80px;
+    left: 25%;
+    border-radius:15px;
+    /* border-style: groove; */
+    border-color: rgb(83, 187, 235);
+    border-width: 1px;
+}
+
+
+
+.safe-btn span {
+    background-color: rgb(221, 107, 62);
+    font-size: 25px;
+    padding: 1px;
+    border-radius: 30%;
+    color: rgb(73, 201, 233);
+}
+
+
+
+
+.game-board {
+    position: absolute;
+    margin: 10px;
+    background-color: rgb(60, 65, 62);
+    width: 50%;
+    height: 70%;
+    table-layout: fixed;
+    
+    box-sizing: content-box;
+    left: 25%;
+    top: 12%;
+    
+}
+
+td {
+    border: 0.1px ridge grey;
+    width: 10%;
+    height: 42px;
+    font-weight: bolder;
+    border-collapse: collapse;
+    background-color: rgb(176, 198, 238);
+    color: rgb(20, 45, 185);
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.hidden {
+    color: transparent;
+    background-color: rgb(127, 127, 131) !important; 
+    
+}
+
+.mine {
+    background-color: rgb(241, 46, 12);
+}
+
+
+.mark {
+    background-color: rgba(190, 165, 153, 0.836) !important;
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.best-scores {
+    position: absolute;
+    bottom: 200px;
+    left: 20px;
+}
+.scores-head {
+    position: absolute;
+    width: 150px;
+    color: rgb(255, 241, 218);
+    text-align: left;
+    bottom: 0%;
+    left: 20px;
+    font-weight: bold;
+}
+
+
+
+ol {
+    position: absolute;
+    width: 8%;
+    margin-left: 0px;
+
+}
+
+li {
+    
+    color: rgb(255, 241, 218);
+    width: 100px;
+    text-align: left;
+    margin-left: 10px;
+    
+}
+
+.scores-head, li {
+    font-family: monospace;
+}
+
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0%;
+}
+
+button {
+    cursor: pointer;
+    
+    font-weight: bold;
+    color: rgb(18, 121, 115);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+    background-color: rgb(253, 246, 209);
+    transition: 0.2s;
+}
+
+
+.diff-btns button{
+    background-color: rgb(253, 246, 209);
+    border-color: rgb(253, 246, 209);
+    box-sizing: content-box;
+    min-width: 80px;
+    height: 35px;
+    margin: 5px 5%;
+    cursor: pointer;
+    border-radius: 8px;
+    border-width: 0px;
+    border-style: solid;   
+}
+
+
+.diff-btns {
+    min-width: 80px;
+}
+
+button:hover {
+    background-color:  rgba(241, 206, 111, 0.945);
+}
+
+.diff-btns button:hover {
+    border-color: rgb(155, 200, 243);
+}
+
+.open-manual {
+    font-size: 2.8rem;
+    position: absolute;
+    margin: 0;
+    opacity: 50%;
+    top: 85%;
+    left: 0%;
+    color: rgb(57, 12, 99);
+    z-index: 5;
+    display: none;
+}
+
+.manual-mode {
+    background-color: rgb(255, 239, 194);
+    /* z-index: 5; */
+}
+
+::selection {
+    background-color: transparent;
+}
+
+.safe-btn:hover {
+    background-color: rgb(53, 211, 250);
+}
+

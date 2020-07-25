@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Mine Sweeper</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body oncontextmenu="return false;" onload="init()">
+
+    <div class="game-container">
+        
+        <header class="center">
+            <div class="hints">
+                <span class="hint1" onclick="renderHintsHtml(this)">💡</span>
+                <span class="hint2" onclick="renderHintsHtml(this)">💡</span>
+                <span class="hint3" onclick="renderHintsHtml(this)">💡</span>
+                
+            </div>
+            <div class="restart-container">
+                
+                <p><span class="restart" onclick="init()"> 😃</span></p>
+            </div>
+            <div class="display">
+                <span class="time">Time: </span> <span class="value">0.00</span>
+            </div>
+        </header>
+        <div class="open-manual">
+            <span>Manual mode</span>
+        </div>
+        <div class="safe-click">
+            <button class="safe-btn" onclick="startSafeClick(this)">Safe click <br><span>3</span></button>
+        </div>
+        <div class="undo">
+            <button class="undo-btn" onclick="undoMove()">Undo</button>
+        </div>
+        <div class="manual">
+            <button class="manual-btn" onclick="startManual(this)">Manual</button>
+        </div>
+        <table class="game-board center">
+            <tbody class="game-cells"></tbody>
+        </table>
+        
+        
+        <div class="diff-btns center">
+        <footer>
+                <button class="easy-btn" onclick="setDifficulty(this)">Easy (4x4)</button>
+                <button class="medium-btn" onclick="setDifficulty(this)">Medium (8x8)</button>
+                <button class="hard-btn" onclick="setDifficulty(this)">Hard (12x12)</button>
+                <div class="best-scores">
+                    <p class="scores-head">Best Scores<span>()</span></p>
+                    <ol>
+                        
+                    </ol>
+                </div>
+            </div>
+        </footer>
+
+
+
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/game.js"></script>
+</body>
+
+
+</html>
